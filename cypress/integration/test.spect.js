@@ -56,16 +56,4 @@ it("test", function(){
     cy.get('#cart_navigation > .button > span').click()
     cy.get('.box').should('contain', '52.99')
     cy.get('.box').first().screenshot()
-
-
-
-
-
-
-
-
-
-
-    
-
 })
