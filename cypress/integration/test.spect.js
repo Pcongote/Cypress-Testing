@@ -7,14 +7,17 @@ it("test", function(){
     //Every time run a new test is necesary change the email to create a new custumer in the page
     cy.get('#email_create').click().type('falseff_' + Math.floor(Math.random() * 100) + 1 + '@gmail.com')
     cy.get('#SubmitCreate > span').click()
+    cy.screenshot()
     cy.wait(10000)
     cy.get('#id_gender1').click
     cy.get('#customer_firstname').type('Joe')
     cy.get('#customer_lastname').type('Doe')
+    cy.screenshot()
     cy.get('#passwd').type('123456798')
     cy.get('#days').select('27')
     cy.get('#months').select('April')
     cy.get('#years').select('1950')
+    cy.screenshot()
     cy.get('#firstname').type('Joe')
     cy.get('#lastname').type('Doe')
     cy.get('#company').type('false Job')
@@ -25,11 +28,13 @@ it("test", function(){
     cy.get('#other').type('Information XXXXXXXXXXXX')
     cy.get('#phone').type('123456894')
     cy.get('#phone_mobile').type('123456123')
+    cy.screenshot()
     cy.get('#submitAccount > span').click()
     cy.get('#search_query_top').type('shirt')
     cy.get('#searchbox > .btn').click()
     cy.contains('Printed Summer Dress').click()
     cy.get('#color_11').click()
+    cy.screenshot()
     cy.get('.exclusive > span').click()
     cy.wait(8000)
     cy.get('.continue > span').click()
@@ -39,6 +44,7 @@ it("test", function(){
     cy.get('#search_query_top').type('Dress')
     cy.get('#searchbox > .btn').click()
     cy.get('[title="Printed Dress"]').eq(1).click()
+    cy.screenshot()
     cy.get('.exclusive > span').click()
     cy.wait(8000)
     cy.get('.button-medium > span').click()
@@ -51,6 +57,7 @@ it("test", function(){
     cy.get('.bankwire > span').click()
     cy.get('#cart_navigation > .button > span').click()
     cy.get('.box').should('contain', '52.99')
+    cy.get('.box').first().screenshot()
 
 
 
