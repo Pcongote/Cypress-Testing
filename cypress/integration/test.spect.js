@@ -1,10 +1,8 @@
 /// <reference types="cypress" />
 
 it("test", function(){
-
     cy.visit('http://automationpractice.com/index.php')
     cy.get('.login').click()
-    //Every time run a new test is necesary change the email to create a new custumer in the page
     cy.get('#email_create').click().type('falseff_' + Math.floor(Math.random() * 100) + 1 + '@gmail.com')
     cy.get('#SubmitCreate > span').click()
     cy.wait(10000)
@@ -51,16 +49,4 @@ it("test", function(){
     cy.get('.bankwire > span').click()
     cy.get('#cart_navigation > .button > span').click()
     cy.get('.box').should('contain', '52.99')
-
-
-
-
-
-
-
-
-
-
-    
-
 })
