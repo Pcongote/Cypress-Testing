@@ -1,7 +1,7 @@
 {
     "video": true,
     "projectId": "39tdk2",
-    "defaultCommandTimeout": 10000,
+    "defaultCommandTimeout": 20000,
     "pageLoadTimeout": 15000,
     "ignoreTestFiles": ["*.js", "*.md"]
 }
